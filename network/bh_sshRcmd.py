@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import threading, paramiko, subprocess
 
 def ssh_command(ip, user, passwd, command):
@@ -20,4 +21,4 @@ def ssh_command(ip, user, passwd, command):
 
     return
 
-ssh_command('localhost','sirius','password','ClientConnected')
+ssh_command('10.211.55.11','justin','lovesthepython','ClientConnected')
