@@ -1,9 +1,29 @@
 #!/usr/bin/python
+# scanner.py - to scan an entire network by using netaddr
+
+import threading, time
+from netaddr import IPNetwork, IPAddress
 import socket, os, struct
 from ctypes import *
 
 # host to listen on
 host = "10.211.55.5"
+
+# subnet to target
+subnet = "192.168.0.0/24"
+
+# magic string we'll check ICMP responses for
+magic_message = "PYTHONRULES!"
+
+# this sprays out the UDP datagrams
+def udp_sender(subjet, magic_message):
+    time.sleep(5)
+    sender = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+    for ip in IPNetwork(subnet):
+        try:
+            sender.sendto(magic_message, ("%s" % ip,65212))
+        except:
+            pass
 
 # IP Header
 class IP(Structure):
@@ -66,6 +86,9 @@ sniffer.setsockopt(socket.IPPROTO_IP, socket.IP_HDRINCL, 1)
 if os.name == "nt":
     sniffer.ioctl(socket.SIO_RCVALL, socket.RCVALL_ON)
 
+t = threading.Thread(target=udp_sender, args=(subnet, magic_message))
+t.start()
+
 try:
     while True:
         # read in a packet
@@ -86,7 +109,15 @@ try:
             # create our ICMP structure
             icmp_header = ICMP(buf)
 
-            print "\tICMP -> Type: %d Code: %d" % (icmp_header.type, icmp_header.code)
+            #print "\tICMP -> Type: %d Code: %d" % (icmp_header.type, icmp_header.code)
+            
+            # now check for the TYPE 3 and CODE
+            if icmp_header.code == 3 and icmp_header.type == 3:
+                # make sure host is in our target subjet
+                if IPAddress(ip_header.src_address) in IPNetwork(subnet):
+                    # make sure it has our magic message
+                    if raw_buffer[len(raw_buffer) - len(magic_message):] == magic_message:
+                        print "Host Up: %s" % ip_header.src_address
 
 # handle CTRL_C
 except KeyboardInterrupt:
