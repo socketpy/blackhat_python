@@ -4,8 +4,8 @@ from scapy.all import *
 import os, sys, threading, signal
 
 interface = "eth1"
-target_ip = "192.168.11.12"
-gateway_ip = "192.168.11.1"
+target_ip = "192.168.2.3"
+gateway_ip = "192.168.2.1"
 packet_count = 10000
 poisoning = True
 

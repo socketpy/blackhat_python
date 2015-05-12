@@ -1,12 +1,13 @@
 #!/usr/bin/python
 # altered version of arper.py -> no recording of .pcap
+# IP Forwarding required
 
 from scapy.all import *
 import os, sys, signal
 
 interface = "eth1"
-target_ip = "192.168.11.12"
-gateway_ip = "192.168.11.1"
+target_ip = "192.168.2.6"
+gateway_ip = "192.168.2.1"
 packet_count = 10000
 poisoning = True
 
