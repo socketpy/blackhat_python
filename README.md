@@ -1,2 +1,2 @@
-[+] Mostly Black Hat Python working code + random security-related python scripts
+[+] Random security-related Python-ish code dump
 
