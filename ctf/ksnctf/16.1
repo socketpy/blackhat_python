@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+  <!-- 0.002s -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@ksnctf">
+    <meta property="og:title" content="ksnctf - 16 Math I">
+    <meta property="og:description" content="Let
+&amp;nbsp;&amp;nbsp;e = 65537,
+&amp;nbsp;&amp;nbsp;n = 15173302362629175953146108888893221156510870808267119488970663408832082055715923923626508585710762479398054362265448332245261375828347704026810053439300594">
+    <title>ksnctf - 16 Math I</title>
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+    <link rel="icon" href="/icon.png" type="image/png">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <style>
+      body{padding-top:60px;}
+      tr.bottom{display:none;}
+    </style>
+    <script type="text/javascript" src="/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/problem.js"></script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+        
+          <a class="brand" href="/">
+            ɟʇɔusʞ
+          </a>
+          
+          <div class="pull-left">
+            <ul class="nav">
+              <li class="">
+                <a href="/">
+                  Home
+                </a>
+              </li>
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Problem<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li class="">
+                    <a href="/problem/1">
+                      1 Test Problem                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/2">
+                      2 Easy Cipher                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/3">
+                      3 Crawling Chaos                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/4">
+                      4 Villager A                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/5">
+                      5 Onion                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/6">
+                      6 Login                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/7">
+                      7 Programming                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/8">
+                      8 Basic is secure?                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/9">
+                      9 Digest is secure!                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/10">
+                      10 #!                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/11">
+                      11 Riddle                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/12">
+                      12 Hypertext Preprocessor                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/13">
+                      13 Proverb                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/14">
+                      14 John                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/15">
+                      15 Jewel                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/16">
+                      16 Math I                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/17">
+                      17 Math II                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/18">
+                      18 USB flash drive                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/19">
+                      19 ZIP de kure                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/20">
+                      20 G00913                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/21">
+                      21 Perfect Cipher                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/22">
+                      22 Square Cipher                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/23">
+                      23 Villager B                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/24">
+                      24 Rights out                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/25">
+                      25 Reserved                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/26">
+                      26 Sherlock Holmes                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/27">
+                      27 Lives out                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/28">
+                      28 Lo-Tech Cipher                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/29">
+                      29 Double Blind                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/30">
+                      30 Alpha Mixed Cipher                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/31">
+                      31 KanGacha                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/32">
+                      32 Simple Auth                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/33">
+                      33 HTTPS is secure.                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/34">
+                      34 Are you human?                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/35">
+                      35 Simple Auth II                    </a>
+                  </li>
+                  <li class="">
+                    <a href="/problem/36">
+                      36 Are you ESPer?                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="/log">
+                  Log
+                </a>
+              </li>
+            </ul>
+          </div>
+          
+          <div class="pull-right">
+            <ul class="nav">
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  Login<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="/twitter_login.php">
+                      <img src="/bird_16_blue.png" width="16" height="16" alt=""> with Twitter
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      
+      <h1>
+        Math I <small>150pt</small>
+      </h1>
+      <div class="well">
+        Let<br>
+&nbsp;&nbsp;<i>e</i> = 65537,<br>
+&nbsp;&nbsp;<i>n</i> = 1517330236262917595314610888889322115651087080826711948897066340883208205571592392362650858571076247939805436226544833224526137582834770402681005343930059463684528957271778199162575053306238099823295117697031968370690372250916935800738698142103275969223264184374648246277564306900886005299731265812255274723175925185522344831066577166867786835955092059346244885587228196357297758371381557924676260190209536670230008561217008649261974735505203813478978893582292682827884118215872470401293272325715864815977064075988643101088355047954735427424641386870772845440782632933485165110172437511822736907550777817722248753671107339823410418938404382732079381329288400012929311347390423061254658780185245562668131009832293474920208834795460061115101364091252176594144096675899952570380792978037217747311595899301451192342027799533264325948876556110474850761538179748318187805312451895898751337975457949549497666542175077894987697085521882531938339334715190663665300179658557458036053188152532948734992896239950564081581184284728802682982779186068791931259198917308153082917381616147108543673346682338045309449569430550618884202465809290850964525390539782080230737593560891353558335337408957948041667929154230334506735825418239563481028126435029,<br>
+&nbsp;&nbsp;<i>c</i> = <i>m</i><sup><i>e</i></sup> mod <i>n</i> = 225549592628492616152632265482125315868911125659971085929712296366214355608049224179339757637982541542745010822022226409126123627804953064072055667012172681551500780763483172914389813057444669314726404135978565446282309019729994976815925850916487257699707478206132474710963752590399332920672607440793116387051071191919835316845827838287954541558777355864714782464299278036910958484272003656702623646042688124964364376687297742060363382322519436200343894901785951095760714894439233966409337996138592489997024933882003852590408577812535049335652212448474376457015077047529818315877549614859586475504070051201054704954654093482056493092930700787890579346065916834434739980791402216175555075896066616519150164831990626727591876115821219941268309678240872298029611746575376322733311657394502859852213595389607239431585120943268774679785316133478171225719729917877009624611286702010936951705160870997184123775488592130586606070277173392647225589257616518666852404878425355285270687131724258281902727717116041282358028398978152480549468694659695121115046850718180640407034795656480263573773381753855724693739080045739160297875306923958599742379878734638341856117533253251168244471273520476474579680250862738227337561115160603373096699944163.<br>
+<br>
+You have succeeded in factorization of <i>n</i> using Shor's algorithm as follows:<br>
+&nbsp;&nbsp;<i>n</i> = <i>p</i><i>q</i>,<br>
+&nbsp;&nbsp;<i>p</i> = 34111525225922333955113751419357677129436029651245533697825114748126342624744832960936498161825269430327019858323450578875242014583535842110912370431931233957939950911741013017595977471949767235426490850284286661592357779825212265055931705799916913817655743434497422993498931394618832741336247426815710164342599150990608143637331068220244525541794855651643135012846039439355101027994945120698530177329829213208761057392236875366458197098507252851244132455996468628957560178868724310000317011912994632328371761486669358065577269198065792981537378448324923622959249447066754504943097391628716371245206444816309511381323,<br>
+&nbsp;&nbsp;<i>q</i> = 44481453884385518268018625442920628989497457642625668259648790876723318635861137128631112417617317160816537010595885992856520476731882382742220627466006460645416066646852266992087386855491152795237153901319521506429873434336969666536995399866125781057768075533560120399184566956433129854995464893265403724034960689938351450709950699740508459206785093693277541785285699733873530541918483842122691276322286810422297015782658645129421043160749040846216892671031156465364652681036828461619272427318758098538927727392459501761203842363017121432657534770898181975532066012149902177196510416802134121754859407938165610800223.<br>
+<br>
+Find the value of <i>m</i>.<br>
+The following python script will give you the flag.<br>
+<pre>
+#!/usr/bin/env python
+m = ????????
+print ("%0512x"%m).decode("hex")
+</pre>      </div>
+      <div style="text-align:right;">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://ksnctf.sweetduet.info/problem/16" data-text="#ksnctf">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <form id="flag">
+        <input type="hidden" name="sessionid" value="pnu8q1bbn3okqd5hgjjl3vrli2">
+        Flag:&nbsp;
+        <input type="text" name="flag" style="width:50%">
+        <input class="btn btn-primary" type="submit">
+      </form>
+      
+      <div class="modal hide fade" id="ok">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h3>Correct!</h3>
+        </div>
+        <div class="modal-body">
+          <p><img src="/amakusa_02_3.png" width="128" height="96" alt=""> Congratulation! Flag <code id="okflag"></code> is correct.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
+        </div>
+      </div>
+      
+      <div class="modal hide fade" id="ng">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h3>Wrong...</h3>
+        </div>
+        <div class="modal-body">
+          <p><img src="/amakusa_02_4.png" width="128" height="96" alt=""> Woops...  Flag <code id="ngflag"></code> is wrong.</p>
+        </div>
+        <div class="modal-footer">
+          <a href="#" data-dismiss="modal" class="btn btn-primary">Close</a>
+        </div>
+      </div>
+      
+      
+      <hr>
+      
+      <address style="text-align:right">
+        キャラクターデザイン 天草帳<br>
+        <a href="https://twitter.com/kusano_k">@kusano_k</a><br>
+        <img src="/mail.png" alt="mail address" width="192" height="24">
+      </address>
+    </div>
+
+    <div>0.002s</div>
+
+  </body>
+</html>
